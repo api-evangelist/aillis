@@ -64,5 +64,32 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Aillis is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/aillis
+Aillis, Inc. (アイリス株式会社) is a Tokyo-based medical technology company founded in 2017 that
+applies machine learning to the diagnosis of infectious disease. Its flagship product, **nodoca**,
+is an AI-equipped pharyngeal camera cleared in Japan as an AI-based new medical device for
+influenza screening: it photographs the posterior pharyngeal wall, detects influenza follicles in
+the image, and combines those findings with body temperature and reported symptoms to support a
+physician's diagnosis.
+
+## API surface
+
+**None found.** nodoca is sold to clinics and hospitals as a finished end-user medical device.
+Contract discovery (2026-09-14) against `aillis.jp`, `www.aillis.jp` and `nodoca.aillis.jp` found
+no OpenAPI, GraphQL, MCP server, A2A agent card, `llms.txt`, or `.well-known` document, and the
+corporate sitemap lists no developer, API, or documentation path.
+
+Note for future runs: `aillis.jp` is a STUDIO (studio.design) no-code site that answers **HTTP 200
+with the same HTML shell for every unknown path** — a control probe of
+`https://aillis.jp/bogus-does-not-exist-xyz` also returned 200. Those 200s are soft-404s and must
+not be read as served documents. `nodoca.aillis.jp` returns honest 404s.
+
+## Links
+
+- Website — https://aillis.jp/
+- About — https://aillis.jp/about
+- News — https://aillis.jp/en/news
+- nodoca (product) — https://nodoca.aillis.jp/
+- Privacy Policy — https://aillis.jp/en/privacy
+- Contact — https://aillis.jp/en/contact
+- Careers — https://aillis.jp/careers
+- LinkedIn — https://www.linkedin.com/company/aillis-inc/

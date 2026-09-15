@@ -1,17 +1,30 @@
 aid: aillis
 name: Aillis
-description: 'Aillis is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Aillis, Inc. (アイリス株式会社) is a Tokyo-based medical technology company founded
+  in 2017 that applies machine learning to the diagnosis of infectious disease. Its flagship
+  product, nodoca, is an AI-equipped pharyngeal camera cleared in Japan as an AI-based new
+  medical device for influenza screening: it photographs the posterior pharyngeal wall,
+  detects influenza follicles in the image, and combines those findings with body temperature
+  and reported symptoms to support a physician''s diagnosis. nodoca is sold to clinics and
+  hospitals as a finished end-user medical device; Aillis publishes no public developer
+  portal, API reference, SDK or machine-readable contract of any kind, and its corporate site
+  is a marketing site built on the STUDIO no-code platform.'
+image: https://storage.googleapis.com/production-os-assets/assets/b6fd5289-9033-4b4c-8983-676f44998135
 url: https://raw.githubusercontent.com/api-evangelist/aillis/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-14'
 modified: '2026-09-14'
 tags:
 - Company
+- Healthcare
+- Medical Devices
+- Artificial Intelligence
+- Machine Learning
+- Diagnostics
+- Medical Imaging
+- Japan
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +32,47 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/aillis-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/aillis
+  url: https://aillis.jp/
+- type: Blog
+  url: https://aillis.jp/en/news
+- type: PrivacyPolicy
+  url: https://aillis.jp/en/privacy
+- type: Support
+  url: https://aillis.jp/en/contact
+- type: Solutions
+  url: https://nodoca.aillis.jp/
+- type: About
+  url: https://aillis.jp/about
+- type: Careers
+  url: https://aillis.jp/careers
+- type: LinkedIn
+  url: https://www.linkedin.com/company/aillis-inc/
+x-enrichment:
+  date: '2026-09-14'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Aillis ships nodoca as a finished AI medical device to Japanese clinics, not as a platform —
+    its entire web presence is a STUDIO-built marketing site whose sitemap lists only about,
+    technology, news, careers, privacy, presskit and contact, with no developer, API or docs path
+    anywhere, and contract discovery against aillis.jp, www.aillis.jp and nodoca.aillis.jp found no
+    OpenAPI, GraphQL, MCP, agent card, llms.txt or .well-known document.
+  evidence:
+  - url: https://aillis.jp/sitemap-static.xml
+    status: 200
+  - url: https://aillis.jp/openapi.json
+    status: 200
+  - url: https://nodoca.aillis.jp/openapi.json
+    status: 404
+  - url: https://nodoca.aillis.jp/.well-known/agent-card.json
+    status: 404
+  - url: https://aillis.jp/bogus-does-not-exist-xyz
+    status: 200
+  checked: '2026-09-14'

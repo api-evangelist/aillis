@@ -1,0 +1,85 @@
+generated: '2026-09-14'
+method: probed
+source: live HTTPS probes of every host in apis.yml (aillis.jp, www.aillis.jp, nodoca.aillis.jp)
+note: >-
+  No .well-known document is served by Aillis on any host. aillis.jp and www.aillis.jp are a
+  STUDIO (studio.design) no-code site that answers HTTP 200 with the same Nuxt HTML shell for
+  EVERY unknown path — a control probe of https://aillis.jp/bogus-does-not-exist-xyz also
+  returned 200 text/html with the generic homepage <title>. Those 200s are soft-404s, not
+  documents, and are recorded as misses. nodoca.aillis.jp returns honest 404s. No WellKnown or
+  SecurityTxt pointer is emitted in apis.yml, because the provider serves none of these surfaces.
+hosts:
+- host: aillis.jp
+  note: STUDIO-hosted SPA; every path returns 200 with an HTML shell (soft-404). All misses.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    content_type: text/html
+    result: soft-404-html-shell
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 200
+    content_type: text/html
+    result: soft-404-html-shell
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    content_type: text/html
+    result: soft-404-html-shell
+    file: null
+  - path: /.well-known/api-catalog
+    status: 200
+    content_type: text/html
+    result: soft-404-html-shell
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    content_type: text/html
+    result: soft-404-html-shell
+    file: null
+- host: www.aillis.jp
+  note: Same STUDIO shell as the apex; every path returns 200 HTML (soft-404). All misses.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    content_type: text/html
+    result: soft-404-html-shell
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 200
+    content_type: text/html
+    result: soft-404-html-shell
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    content_type: text/html
+    result: soft-404-html-shell
+    file: null
+  - path: /.well-known/api-catalog
+    status: 200
+    content_type: text/html
+    result: soft-404-html-shell
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    content_type: text/html
+    result: soft-404-html-shell
+    file: null
+- host: nodoca.aillis.jp
+  note: nodoca product site (ferret One CMS); returns real 404s. All misses.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
