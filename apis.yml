@@ -21,7 +21,7 @@ tags:
 - Healthcare
 - Medical Devices
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Diagnostics
 - Medical Imaging
 - Japan
@@ -34,6 +34,7 @@ tags_raw:
 - Diagnostics
 - Medical Imaging
 - Japan
+- Machine-Learning
 apis: []
 maintainers:
 - FN: Kin Lane
